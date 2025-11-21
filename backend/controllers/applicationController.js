@@ -30,15 +30,13 @@ export const postApplication = catchAsyncErrors(async(req ,res , next)=>{
     };
 
     const jobDetails = await Job.findById(id);
-    console.log(jobDetails.id);
-    console.log(id);
 
     if(!jobDetails){
         return next (new ErrorHandler("Job not found", 404))
     }
     
      const isAlreadyApplied = await Application.findOne({
-        "jobDetails.jobId" : id,
+        "jobInfo.jobID" : id,
         "jobSeekerInfo.id" : req.user._id 
     })
 

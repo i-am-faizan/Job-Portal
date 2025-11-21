@@ -74,7 +74,7 @@ const PostApplication = () => {
     responsibilities = singleJob.responsibilities.split(". ");
   }
 
-  if (singleJob.qualifications) {
+  if (singleJob.offers) {
     offers = singleJob.offers.split(". ");
   }
 
@@ -124,7 +124,10 @@ const PostApplication = () => {
               onChange={(e) => setAddress(e.target.value)}
             />
           </div>
-          <div>
+          {
+            user && user.role === "Job Seeker" && (
+              <>              
+              <div>
             <label>Coverletter</label>
             <textarea
               value={coverLetter}
@@ -136,6 +139,9 @@ const PostApplication = () => {
             <label>Resume</label>
             <input type="file" onChange={resumeHandler} />
           </div>
+              </>
+            )
+          }
           {user.role === "Job Seeker" && isAuthenticated && (
             <div style={{ alignItems: "flex-end" }}>
               <button
@@ -152,7 +158,7 @@ const PostApplication = () => {
           <header>
             <h3>{singleJob.title}</h3>
             {singleJob.personalWebsite && (
-              <Link to={singleJob.personalWebsite.url}>
+              <Link target="_blank" to={singleJob.personalWebsite.url}>
                 {singleJob.personalWebsite.title}
               </Link>
             )}

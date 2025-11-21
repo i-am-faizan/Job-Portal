@@ -56,10 +56,10 @@ const MyApplication = () => {
                       <span>Job Title: </span> {element.jobInfo.jobTitle}
                     </p>
                     <p className="sub-sec">
-                      <span>Name</span> {element.jobSeekerInfo.name}
+                      <span>Name: </span> {element.jobSeekerInfo.name}
                     </p>
                     <p className="sub-sec">
-                      <span>Email</span> {element.jobSeekerInfo.email}
+                      <span>Email: </span> {element.jobSeekerInfo.email}
                     </p>
                     <p className="sub-sec">
                       <span>Phone: </span> {element.jobSeekerInfo.phone}
@@ -68,7 +68,7 @@ const MyApplication = () => {
                       <span>Address: </span> {element.jobSeekerInfo.address}
                     </p>
                     <p className="sub-sec">
-                      <span>Coverletter: </span>{" "}
+                      <span>Coverletter: </span>
                       {element.jobSeekerInfo.coverLetter}
                       <textarea
                         value={element.jobSeekerInfo.coverLetter}

@@ -165,7 +165,7 @@ const dashboard = () => {
                     return <MyJobs/>
                     break;
                   
-                  case "Applications":
+                  case "Application":
                     return <Application/>
                     break;
                   
