@@ -17,7 +17,7 @@ export const newsLetterCron = () => {
                 })
                 for (const user of filterUsers) {
                     const subject = `Hot Job Alert: ${job.title} in ${job.jobNiche} Available Now`;
-                    const message = `Hi ${user.name || "there"},\n\nGreat news! A new job has just been posted that matches your interest in ${job.jobNiche}.\n\n**Job Title:** ${job.title}\n**Company:** ${job.companyName}\n**Location:** ${job.location || "Not specified"}\n**Job Type:** ${job.jobType || "N/A"}\n**Salary:**${job.salary}\n**Posted On:** ${new Date(job.createdAt).toLocaleDateString()}\n\nBrief Description:\n${job.description?.slice(0, 150) || "Check out the full details below."}...\n\nDont't wait too long! Job openings like these are filled quickly. \n\nWe're here to support you in your job search. Best of luck!\n\nBest Regards,\nNicheNest Team`;
+                    const message = `Hi ${user.name || "there"},\n\nGreat news! A new job has just been posted that matches your interest in ${job.jobNiche}.\n\n**Job Title:** ${job.title}\n**Company:** ${job.companyName}\n**Location:** ${job.location || "Not specified"}\n**Job Type:** ${job.jobType || "N/A"}\n**Salary:**${job.salary}\n**Posted On:** ${new Date(job.createdAt).toLocaleDateString()}\n\nBrief Description:\n${job.description?.slice(0, 150) || "Check out the full details below."}...\n\nDont't wait too long! Job openings like these are filled quickly. \n\nWe're here to support you in your job search. Best of luck!\n\nBest Regards,\nCareerCraft Team`;
                     sendEmail({
                         email: user.email,
                         subject,

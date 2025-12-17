@@ -9,13 +9,13 @@ const Footer = () => {
     <>
       <footer>
         <div>
-          <img src="/logo.png" alt="logo" />
+          <img src="/Logo.jpg" alt="logo" />
         </div>
         <div>
           <h4>Support</h4>
           <ul>
             <li>Azad Nagar Indore, India</li>
-            <li>khanfaizan000@gmail.com</li>
+            <li><Link to={"mailto:careercraft.connect@gmail.com"}>careercraft.connect@gmail.com</Link></li>
             <li>+91 7879690308</li>
           </ul>
         </div>
@@ -33,27 +33,27 @@ const Footer = () => {
           <h4>Follow Us</h4>
           <ul>
             <li>
-              <Link to={"/"}>
-                <span><FaSquareXTwitter/></span>
-                <span>Twitter (X)</span>
-              </Link>
-            </li>
-            <li>
-              <Link to={"/"}>
-                <span><FaSquareInstagram/></span>
-                <span>Instagram</span>
-              </Link>
-            </li>
-            <li>
-              <Link to={"/"}>
+              <Link to={"https://github.com/i-am-faizan"} target='_blank'>
                 <span><FaSquareGithub/></span>
                 <span>Github</span>
               </Link>
             </li>
             <li>
-              <Link to={"/"}>
+              <Link to={"https://www.instagram.com/i_am_mr_faizu/"} target='_blank'>
+                <span><FaSquareInstagram/></span>
+                <span>Instagram</span>
+              </Link>
+            </li>
+            <li>
+              <Link to={"https://www.linkedin.com/in/faizan-khan-943bb5327/"} target='_blank'>
                 <span><FaLinkedin/></span>
                 <span>LinkedIn</span>
+              </Link>
+            </li>
+            <li>
+              <Link to={"https://x.com/i_am_mr_faizu"} target='_blank'>
+                <span><FaSquareXTwitter/></span>
+                <span>Twitter (X)</span>
               </Link>
             </li>
           </ul>
